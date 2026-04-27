@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+echo "== deploy s3 bucket via CF"
+STACK_NAME="cfn-s3-simple"
+aws cloudformation delete-stack \
+--stack-name $STACK_NAME \
+--region us-west-2
