@@ -6,7 +6,7 @@ bucket_name=ENV['BUCKET_NAME']
 region='us-east-1'
 puts bucket_name
 
-client=Aws::S3::Client.new
+s3 = client=Aws::S3::Client.new
 
 resp=client.create_bucket({
     bucket:bucket_name
@@ -19,7 +19,7 @@ number_of_files.times.each do |i|
     filename="file_#{i}.txt"
     output_path="/tmp/#{filename}"
     File.open(output_path,"w") do |f|
-        f.write Securerandom.uuid
+        f.write SecureRandom.uuid
     end
     File.open(output_path, 'rb') do |f|
         s3.put_object(
