@@ -29,4 +29,5 @@ number_of_files.times.each do |i|
         )
     end
 end
-
+#For execute this code:
+#@Marco23t ➜ .../Aws-examples/s3/sdk/ruby (main) $ BUCKET_NAME='my-ruby-sdk-example-marcoab9876' bundle exec ruby s3.rb
