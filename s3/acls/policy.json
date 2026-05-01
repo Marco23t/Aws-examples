@@ -1,0 +1,14 @@
+{
+  "Owner": {
+    "ID": "1f298555929f3b04cecad9731bccfc74e566441ac1a6ccd4c1b424389485cd1c"
+  },
+  "Grants": [
+    {
+      "Grantee": {
+        "Type": "CanonicalUser",
+        "ID": "1f298555929f3b04cecad9731bccfc74e566441ac1a6ccd4c1b424389485cd1c"
+      },
+      "Permission": "FULL_CONTROL"
+    }
+  ]
+}

@@ -6,3 +6,8 @@ aws s3 mb s3://class-fun-ab224424
 
 echo "Hello wordl">hello.txt
 aws s3 cp hello.txt s3://class-fun-ab224424 --storage-class STANDARD_IA 
+
+#cleaunup
+
+aws s3 rm s3://class-fun-ab224424/hello.txt
+aws s3 rb s3://class-fun-ab224424
