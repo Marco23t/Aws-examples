@@ -1,0 +1,30 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Description: Simple STS Assume Role Demo
+
+Resources:
+  StsRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: sts-demo-role-v2
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS: arn:aws:iam::021502749434:user/sts-machine-user
+            Action: "sts:AssumeRole"
+
+  StsPolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: sts-demo-policy
+      Roles:
+        - !Ref StsRole
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Action:
+              - sts:GetCallerIdentity
+            Resource: "*"
